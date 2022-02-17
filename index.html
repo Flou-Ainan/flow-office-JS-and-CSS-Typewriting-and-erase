@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<style>
+body {
+	background-image: 
+}
+div {
+   display: flex;
+   margin: 4% 12%;
+   padding: 2%;
+   box-shadow: 2px 2px 3px 0 rgba(0, 0, 0, 0.25);
+   border-radius: 4vw;
+}
+h {
+   font-family: "Arial";
+   font-size: 2em;
+   color: black;
+   padding: 3vw 4vw;
+}
+g {
+   animation: type 0.33s infinite;
+   padding: 0;
+}
+
+h3 {
+  text-align: center;
+}
+@keyframes type{
+   to { opacity: .0; }
+}
+</style>
+<body>
+<div>
+<h>
+<y id="text"></y>
+<g>|</g></h>
+</div>
+<p> <h3>By: <a href="flowoffice.eu5.net">Flou Ainan</a></h3> </p>
+<script>
+const words = ["CRACKA LACK ON THE TRACK", "BUY 2 GET 1 FREE", "INSTANT DELIVERY"];
+let i = 0;
+let counter;
+function typeNow() {
+   let word = words[i].split("");
+   var loopTyping = function() {
+      if (word.length > 0) {
+         document.getElementById('text').innerHTML += word.shift();
+      } else {
+         deleteNow();
+         return false;
+      };
+      counter = setTimeout(loopTyping, 130);
+   };
+   loopTyping();
+};
+function deleteNow() {
+   let word = words[i].split("");
+   var loopDeleting = function() {
+      if (word.length > 0) {
+         word.pop();
+         document.getElementById('text').innerHTML = word.join("");
+      } else {
+         if (words.length > (i + 1)) {
+            i++;
+         }
+         else {
+            i = 0;
+         };
+         typeNow();
+         return false;
+      };
+      counter = setTimeout(loopDeleting, 20);
+   };
+   loopDeleting();
+};
+typeNow();
+</script>
+</body>
+</html>

@@ -2,7 +2,13 @@
 <html>
 <style>
 body {
-	background-image: 
+   padding: 5vw 0;
+   background-image: url("https://i.pinimg.com/originals/3e/a9/ba/3ea9ba9e84ab6808a394b6aa165c1673.jpg");
+   background-repeat: no-repeat;
+   background-attachment: fixed;
+   background-size: 100% auto;
+   width: 100%;
+
 }
 div {
    display: flex;
@@ -10,6 +16,7 @@ div {
    padding: 2%;
    box-shadow: 2px 2px 3px 0 rgba(0, 0, 0, 0.25);
    border-radius: 4vw;
+   background-color: #fff;
 }
 h {
    font-family: "Arial";
@@ -35,7 +42,7 @@ h3 {
 <y id="text"></y>
 <g>|</g></h>
 </div>
-<p> <h3>By: <a href="flowoffice.eu5.net">Flou Ainan</a></h3> </p>
+<p> <h3>By: <a href="http://flowoffice.eu5.net">Flou Ainan</a></h3> </p>
 <script>
 const words = ["CRACKA LACK ON THE TRACK", "BUY 2 GET 1 FREE", "INSTANT DELIVERY"];
 let i = 0;
@@ -53,6 +60,7 @@ function typeNow() {
    };
    loopTyping();
 };
+
 function deleteNow() {
    let word = words[i].split("");
    var loopDeleting = function() {
